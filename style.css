@@ -25,6 +25,10 @@ main {
     text-align: center;
 }
 
+img{
+    width: 100%;
+}
+
 .principal h2{
     font-size: 1.8rem;
     font-weight: 400;
@@ -110,4 +114,58 @@ a {
 }
 a:hover {
     text-decoration: underline; /*sublinhado*/
+}
+
+.your-lang-wiki-container {
+    width: 460px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-20%);
+}
+.your-lang-wiki {
+    color: var(--blue-clr);
+    border: 1px solid var(--blue-clr);
+    background-color: rgba(51, 102, 204, .05);
+    border-radius: .2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+}
+.line {
+    height: 1px;
+    background-color: #c5c5c5;
+    flex: 1;
+}
+.your-lang-wiki span:nth-child(2) {
+    margin: 0 .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.your-lang-wiki:hover {
+    background-color: transparent;
+}
+
+.searchLanguage{
+    position: absolute;
+    right: 16.43%;
+    bottom: 15%;
+
+    width: 52px;
+    height: 25px;
+}
+
+/*Responsividade para telas menores*/
+
+@media (max-width: 765px){
+   
+    .colunaEsquerda{
+        transform: translateX(+20%);
+    }
+    
+    .colunaDireita{
+        transform: translateX(-20%);
+    }
+    
 }
