@@ -1,5 +1,7 @@
 # Wikipedia-Project
-Projeto Wikipedia HTML
+Projeto Wikipedia HTML e CSS + JS (tela de login)
+
+Por conta da utilização da função do JS, não foi possível colocar os estilos da tela do login em um arquivo separado.
 
 Alunos:
 Eduardo Durante Godinho RA: 2101327
