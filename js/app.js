@@ -1,45 +1,55 @@
+//Verifica se o campo email tem menos de 3 caracteres 
 
-
-//Verifica se o campo Email tem menos de 3 caracteres - tempo real
 document.getElementById("email").addEventListener(
     "keyup",
     (event) => {
-        var email = document.querySelector("#email").value;
-        var wrapper = document.querySelector(".mensagemEmail");
-        wrapper.innerHTML = "";
+        var email = document.querySelector("#email").value; //armazena o valor do campo email
+        var mensagem = document.querySelector(".mensagemEmail");
+        mensagem.innerHTML = "";
         if (email.length < 3){
-            wrapper.innerHTML = "⚠ Email inválido!";}
+            mensagem.innerHTML = "Email inválido! É necessário ter no mínimo 3 caracteres";}
         else {
-            wrapper.innerHTML = "✔ Email válido!";
+            mensagem.innerHTML = "✔ Email válido!";
         }
     }
     ,
   false
 );
 
-//Verifica se o campo Senha tem menos de 3 caracteres - tempo real
+//Verifica se o campo password tem menos de 3 caracteres
+
 document.getElementById("password").addEventListener(
   "keyup",
     (event) => {
-        var senha = document.querySelector("#password").value;
-        var wrapper = document.querySelector(".mensagemPassword");
-        wrapper.innerHTML = "";
+        var senha = document.querySelector("#password").value; //armazena o valor do campo password
+        var mensagem = document.querySelector(".mensagemPassword");
+        mensagem.innerHTML = "";
         if (senha.length < 3) {
-            wrapper.innerHTML = "⚠ Senha inválida!";
+            mensagem.innerHTML = "Senha inválida! É necessário ter no mínimo 3 caracteres";
         }
         else {
-          wrapper.innerHTML = "✔ Senha válida!";
+          mensagem.innerHTML = "✔ Senha válida!";
         }
     }
     ,
   false
 );
+
+//Utilizamos o exemplo da função dialog de JS vista em aula para acionar a ação de mostrar a tela de login 
+//e os resultados, sendo ste por último apenas se o usuário digitou alguma coisa no campo de input
 
 var button = document.querySelector('#btnLOGIN');
 dialog = document.querySelector('.dialog');
 button.addEventListener("click", function(){
-dialog.className = 'dialog show';
+    dialog.className = 'dialog show';
 });
+
+//Função usada para buscar possíveis resultados da pesquisa
+//Tivemos muita dificuldade e não conseguimos encontrar uma API adequada para o projeto
+//A API mais próxima foi a Quran da url https://quran.api-docs.io/v4/search/KfCmk4KQYbtyK9adj
+//No entanto, ela não funcionou como esperávamos no momento de mostrar os resultados na página,
+//logo optamos por deixar a openlibrary padrão também visto em aula.
+//Para funcionar é necessário digitar algo válido no campo de texto e clicar na lupa de pesquisar
 
 var container = document.querySelector("ul");
 document.querySelector("#btnSearch").addEventListener("click", function () {
@@ -60,4 +70,3 @@ axios
     }
     });
 });
-
