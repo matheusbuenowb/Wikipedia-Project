@@ -4,6 +4,7 @@ optamos por deixar as posições da última atualização-->
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Wikipedia</title>
@@ -388,62 +389,6 @@ optamos por deixar as posições da última atualização-->
 
          <!--Utilizamos o exemplo da função dialog de JS vista em aula para acionar a ação de mostrar a tela de login -->
         
-        <script type="text/javascript" charset = "utf-8">
-            var button = document.querySelector('button');
-                dialog = document.querySelector('.dialog');
-            button.addEventListener("click", function(){
-                dialog.className = 'dialog show';
-            });
-
-        </script>
-
-
-        <script type="text/javascript" charset = "utf-8">
-
-document.getElementById("email").addEventListener(
-    "keyup",
-    (event) => {
-        var email = document.querySelector("#email").value;
-        var wrapper = document.querySelector(".mensagemEmail");
-        wrapper.innerHTML = "";
-        if (email.length < 3){
-            wrapper.innerHTML = "⚠ Email inválido!";}
-        else {
-            wrapper.innerHTML = "✔ Email válido!";
-        }
-    }
-    ,
-  false
-);
-
-document.getElementById("password").addEventListener(
-  "keyup",
-    (event) => {
-        var senha = document.querySelector("#password").value;
-        var wrapper = document.querySelector(".mensagemPassword");
-        wrapper.innerHTML = "";
-        if (senha.length < 3) {
-            wrapper.innerHTML = "⚠ Senha inválida!";
-        }
-        else {
-          wrapper.innerHTML = "✔ Senha válida!";
-        }
-    }
-    ,
-  false
-);
-
-        </script>
-
-
-        <script type="text/javascript" charset = "utf-8">
-            var button = document.querySelector('button');
-                dialog = document.querySelector('.dialog');
-            button.addEventListener("click", function(){
-                dialog.className = 'dialog show';
-            });
-
-        </script>
 
     <script src="js/app.js"></script>
 
