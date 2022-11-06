@@ -1,9 +1,10 @@
 # Wikipedia-Project
 Projeto Wikipedia HTML e CSS + JS (tela de login)
 
-Tentamos usar diversas API do site do GitHub. No entanto, poucas tinham a funcionalidade de busca (search), e dentre elas que tinham
-era a API QURAN, que por meio da url https://api.quran.com/api/v4/search?q= obtivemos alguns resultados de pesquisa. 
-https://api.quran.com/api/v4/search?q=
+Tivemos muita dificuldade e não conseguimos encontrar uma API adequada para o projeto.
+A API mais próxima foi a Quran da url https://quran.api-docs.io/v4/search/KfCmk4KQYbtyK9adj
+No entanto, ela não funcionou como esperávamos no momento de mostrar os resultados na página,
+logo optamos por deixar a openlibrary padrão também visto em aula. Para funcionar é necessário digitar algo válido no campo de texto e clicar na lupa de pesquisar
 
 Por conta da utilização da função do JS, não foi possível colocar os estilos da tela do login em um arquivo separado.
 Portanto, deixamos a implementação da tela de login no arquivo index.html.
