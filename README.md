@@ -1,7 +1,7 @@
 # Wikipedia-Project
 Projeto Wikipedia HTML e CSS + JS (tela de login e cadastro)
 
-O github não aceita muitos arquivos de uma vez, logo não conseguimos enviar a pasta "modules"
+Parte 3
 
 Tivemos muita dificuldade e não conseguimos encontrar uma API adequada para o projeto.
 A API mais próxima foi a Quran da url https://quran.api-docs.io/v4/search/KfCmk4KQYbtyK9adj
