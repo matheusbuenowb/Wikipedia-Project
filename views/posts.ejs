@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header class="bg-dark">
+        <div class="col-100">
+            <h1 class="color-white">
+                Cadastro de posts
+            </h1>
+        </div>
+    </header>
+    <section>
+    <div class ="col-30">
+        <div class="apresentaErro"></div>
+        <form action = "/posts/add" enctype="multipart/form-data" method = "post" >
+            <label for="ftitulo">Titulo:</label>
+            <input type="text" id = "titulo" name="titulo"><br><br>
+            <label for="fcategoria">Categoria:</label>
+            <input type="text" id = "categoria" name="categoria"><br><br>
+            <label for="fthumbnail">Thumbnail:</label>
+            <input type="file" id="thumbnail" name="thumbnail">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    <div class="col-70">
+        <table>
+            <tbody>
+                <% for(var i=0;i< posts.length;i++){ %>
+                    <tr>
+                        <td>#<%= i+1 %></td>
+                        <td><strong> <%= posts[i].titulo %></strong></td>
+                        <td><%= posts[i].categoria %></td>
+                        <td>
+                            <img src ="http://localhost:3000/uploads/<%= posts[i].thumbnail %>">
+                        </td>
+                    </tr>
+                <%} %>
+            </tbody>
+        </table>
+    </div>
+  </section>
+
+  </script>
+</body>
+
+<script src="/js/novopost.js"></script>
+
+</html>

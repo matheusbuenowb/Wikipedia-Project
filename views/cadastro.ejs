@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+
+
+  <header class="bg-dark">
+    <div class="col-100">
+      <h1 class="color-white">
+        Cadastro de usuário
+      </h1>
+    </div>
+  </header>
+  <section>
+    <div class="col-30 bg-grey">
+      <form action="/cadastro/add" method="post">
+        <legent>Adicionar Usuário</legent>
+        <br>
+        <br>
+        <input type = "text" id = "name" name = "name" placeholder="Nome">
+        <span class = "mensagemName"> Validação do nome </span>
+        <input type = "text" id ="email" name = "email" placeholder="E-mail">
+        <span class = "mensagemEmail"> Validação do email </span>
+        <input type="text" id = "login" name = "login" placeholder="Login">
+        <span class="mensagemLogin">  Validação do login </span>
+        <input type="password" id = "password" name="passoword" placeholder="Senha">
+        <span class="mensagemPassword">  Validação da senha </span>
+
+        <button type="submit">Adicionar</button>
+        
+
+      </form>
+
+      <form action="/">
+        <button type="submit">Voltar</button>
+    </form>
+    </div>
+
+      <% if(is_admin){ %>
+        <div class="col-70">
+      <%} else{ %>
+      <div style="display: none;" class="col-70">
+      <% } %>
+      <table>
+        <tbody>
+          <% for(var i=0;i< usuarios.length;i++){ %>
+            <tr>
+              <td>#<%= i+1 %></td>
+              <td><strong> <%= usuarios[i].nome %></strong></td>
+              <td><%= usuarios[i].email %></td>
+              <td><%= usuarios[i].login %></td>
+            </tr>
+            <%} %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="javascripts/cadastro.js"></script>
+
+
+  </script>
+</body>
+
+
+</html>
